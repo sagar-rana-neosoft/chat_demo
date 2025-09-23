@@ -57,21 +57,17 @@ final GoRouter router = GoRouter(
     final isAuthenticated = authState is AuthAuthenticated;
     final isUnauthenticated = authState is AuthUnauthenticated || authState is AuthError;
 
-    // List of routes that don't require authentication
     final authRoutes = [AppRoutes.splash, AppRoutes.login, AppRoutes.register];
     final isAuthRoute = authRoutes.contains(state.uri.path);
 
-    // If still authenticating, wait.
     if (isAuthenticating) {
       return null;
     }
 
-    // Redirect to login if unauthenticated and not already on an auth route.
     if (isUnauthenticated && !isAuthRoute) {
       return AppRoutes.login;
     }
 
-    // Redirect to chat list if authenticated and trying to access an auth route.
     if (isAuthenticated && isAuthRoute) {
       return AppRoutes.chatList;
     }

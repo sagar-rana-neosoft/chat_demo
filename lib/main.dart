@@ -33,8 +33,8 @@ class MyApp extends StatelessWidget {
     final userListCubit = sl<UserListCubit>();
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (_) => authCubit),
-        BlocProvider(create: (_) => userListCubit),
+        BlocProvider(create: (_) => sl<AuthCubit>()),
+        BlocProvider(create: (_) => sl<UserListCubit>()),
         BlocProvider(create: (_) => sl<ChatCubit>()),
         BlocProvider(create: (_) => sl<ChatListCubit>()),
         BlocProvider(create: (_) => sl<UserProfileCubit>()),

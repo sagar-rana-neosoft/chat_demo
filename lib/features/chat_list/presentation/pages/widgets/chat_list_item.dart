@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+import 'package:sagar_chat_demo/core/utils/date_formatter.dart';
 import 'package:sagar_chat_demo/core/widgets/base_text.dart';
 import '../../../domain/entities/chat_list_entity.dart';
 
@@ -47,7 +47,7 @@ class ChatListItem extends StatelessWidget {
           color: Colors.grey,
         ),
         trailing: BaseText(
-          DateFormat.Hm().format(chat.lastMessageTimestamp),
+          formatLastMessageTime(chat.lastMessageTimestamp),
           fontSize: 12,
           color: Colors.grey,
         ),
