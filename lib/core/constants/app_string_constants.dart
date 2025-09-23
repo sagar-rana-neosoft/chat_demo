@@ -1,0 +1,45 @@
+class AppStringConstants {
+  static const String welcomeBack = 'Welcome Back!';
+  static const String loginToContinue = 'Login to continue';
+  static const String login = 'Login';
+  static const String email = 'Email';
+  static const String password = 'Password';
+  static const String pleaseEnterEmail = 'Please enter your email';
+  static const String pleaseEnterPassword = 'Please enter your password';
+  static const String dontHaveAccount = 'Don\'t have an account? Register';
+  static const String aLightBlue = 'A light blue';
+  static const String aSlightlyDarkerBlue = 'A slightly darker blue';
+  static const String createYourAccount = 'Create Your Account';
+  static const String joinUs = 'Join us to start chatting!';
+  static const String displayName = 'Display Name';
+  static const String pleaseEnterDisplayName = 'Please enter your display name';
+  static const String passwordMinLength = 'Password must be at least 6 characters';
+  static const String confirmPassword = 'Confirm Password';
+  static const String confirmPasswordNotMatched = 'Confirm Password is not matched';
+  static const String register = 'Register';
+  static const String alreadyHaveAccount = 'Already have an account? Login';
+  static const String chatLoadingError = 'Error loading chats.';
+  static const String reason = 'Reason: ';
+  static const String retry = 'Retry';
+  static const String chats = 'Chats';
+  static const String profile = 'Profile';
+  static const String logout = 'Logout';
+  static const String userList = 'User List';
+  static const String internetNotAvailable = 'Internet is not available';
+  static const String noInternetToRefresh = 'No internet connection to refresh';
+  static const String noChatsFound = 'No chats found.';
+  static const String loading = 'Loading...';
+  static const String typeMessageHere = 'Type your message here...';
+  static const String editOrDeleteMessage = 'Edit or Delete Message';
+  static const String edit = 'Edit';
+  static const String delete = 'Delete';
+  static const String editMessage = 'Edit Message';
+  static const String enterNewMessage = 'Enter new message';
+  static const String cancel = 'Cancel';
+  static const String save = 'Save';
+  static const String contacts = 'Contacts';
+  static const String noOtherUsersFound = 'No other users found.';
+  static const String error = 'Error: ';
+  static const String validEmailAddress = 'Please enter a valid email address. ';
+
+}

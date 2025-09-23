@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "80372204649",
+    "project_id": "codebase-demo",
+    "storage_bucket": "codebase-demo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:80372204649:android:911d5b77bf8cff4647cef8",
+        "android_client_info": {
+          "package_name": "com.codebase.sagar_chat_demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCeZKT0X4UGOLA8PbT_OseWkTrIKti81M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
