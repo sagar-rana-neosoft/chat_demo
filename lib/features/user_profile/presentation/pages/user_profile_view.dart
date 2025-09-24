@@ -88,7 +88,7 @@ class _ProfileViewState extends State<ProfileView> {
                       ),
                       const SizedBox(height: 24.0),
                       if (state is UserProfileUpdating)
-                        const CircularProgressIndicator()
+                        Center(child: const CircularProgressIndicator())
                       else
                         SizedBox(
                           width: double.infinity,

@@ -37,7 +37,7 @@ class ChatRepositoryImpl implements ChatRepository {
     return _firestore
         .collection(FirebaseConstants.chatsCollection)
         .doc(chatId)
-        .collection('messages')
+        .collection(FirebaseConstants.chatsCollection)
         .orderBy('time_stamp', descending: true)
         .snapshots()
         .map((snapshot) {
@@ -61,7 +61,6 @@ class ChatRepositoryImpl implements ChatRepository {
     final chatDocRef = _firestore.collection(FirebaseConstants.chatsCollection).doc(chatId);
     final now = Timestamp.now();
 
-    // Check if the chat document exists.
     final chatDoc = await chatDocRef.get();
     if (!chatDoc.exists) {
       await chatDocRef.set({
@@ -76,7 +75,6 @@ class ChatRepositoryImpl implements ChatRepository {
       });
     }
 
-    // Add the new message to the messages sub-collection
     await chatDocRef.collection(FirebaseConstants.chatsCollection).add({
       'message': messageText,
       'sender_id': myId,
@@ -90,7 +88,7 @@ class ChatRepositoryImpl implements ChatRepository {
     await _firestore
         .collection(FirebaseConstants.chatsCollection)
         .doc(chatId)
-        .collection('messages')
+        .collection(FirebaseConstants.chatsCollection)
         .doc(messageId)
         .update({
       'readBy': FieldValue.arrayUnion([readerId]),
@@ -102,7 +100,7 @@ class ChatRepositoryImpl implements ChatRepository {
     final messageDocRef = _firestore
         .collection(FirebaseConstants.chatsCollection)
         .doc(chatId)
-        .collection('messages')
+        .collection(FirebaseConstants.chatsCollection)
         .doc(messageId);
 
     await messageDocRef.update({
@@ -115,7 +113,7 @@ class ChatRepositoryImpl implements ChatRepository {
     final messageDocRef = _firestore
         .collection(FirebaseConstants.chatsCollection)
         .doc(chatId)
-        .collection('messages')
+        .collection(FirebaseConstants.chatsCollection)
         .doc(messageId);
 
     await messageDocRef.delete();

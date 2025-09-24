@@ -70,6 +70,10 @@ class RegisterCard extends StatelessWidget {
                   if (value == null || value.isEmpty) {
                     return AppStringConstants.pleaseEnterEmail;
                   }
+                  final emailRegex = RegExp(r'^[^@]+@[^@]+\.[^@]+');
+                  if (!emailRegex.hasMatch(value)) {
+                    return AppStringConstants.validEmailAddress;
+                  }
                   return null;
                 },
               ),

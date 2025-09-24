@@ -18,7 +18,7 @@ class UserRepositoryImpl implements UserRepository {
         .map((snapshot) {
       return snapshot.docs.map((doc) {
         final userModel = UserModel.fromFirestore(doc);
-        return UserEntity( // Convert the data model to a domain entity
+        return UserEntity(
           id: userModel.id,
           displayName: userModel.displayName,
           email: userModel.email,

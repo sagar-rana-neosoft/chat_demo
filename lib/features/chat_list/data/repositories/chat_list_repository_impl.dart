@@ -41,7 +41,7 @@ class ChatListRepositoryImpl implements ChatListRepository {
           final userDoc = userDocsMap[peerId];
 
           if (userDoc == null) {
-            // Handle case where peer user doc is missing
+
             return ChatListEntity(
               chatId: chatDoc.id,
               peerId: peerId,
